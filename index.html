@@ -10,6 +10,23 @@
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="slidy.css">
+<style>
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
 </head>
 <body>
 <div id="menu">
@@ -41,61 +58,75 @@
 
 <div class="section">
 <div class="pageitem">
-<div id="slider">
-<figure>
-<img src="http://lorempixel.com/g/680/300/people/1" alt>
-<img src="http://lorempixel.com/g/680/300/nature/1" alt>
-<img src="http://lorempixel.com/g/680/300/city/1" alt>
-<img src="http://lorempixel.com/g/680/300/people/1" alt> <!-- note 1st image is also the last -->
-</figure>
-</div>
+<div class="col">
+<h2>Librosa Cheat Sheet</h2>
+<table>
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Importing Librosa</td>
+    <td><code>import librosa</code></td>
+    <td>Imports the librosa library</td>
+  </tr>
+  <tr>
+    <td>Loading Audio Files</td>
+    <td><code>y, sr = librosa.load('filename.wav')</code></td>
+    <td>Reads and decodes audio files</td>
+  </tr>
+  <tr>
+    <td>Playing Audio</td>
+    <td><code>import soundfile as sf</code> <br> <code>sf.write('new_filename.wav', y, sr)</code></td>
+    <td>Writes the loaded audio data into a new file</td>
+  </tr>
+  <tr>
+    <td>Audio Features</td>
+    <td>
+      <ul>
+        <li><b>Spectrogram</b>: <code>D = librosa.stft(y)</code></li>
+        <li><b>Mel Spectrogram</b>: <code>S = librosa.feature.melspectrogram(y, sr=sr)</code></li>
+        <li><b>Chroma Feature</b>: <code>C = librosa.feature.chroma_stft(y=y, sr=sr)</code></li>
+        <li><b>Spectral Contrast</b>: <code>S_contrast = librosa.feature.spectral_contrast(y=y, sr=sr)</code></li>
+      </ul>
+    </td>
+    <td>Computes different features from audio data</td>
+  </tr>
+  <tr>
+    <td>Beat and Tempo</td>
+    <td><code>tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)</code></td>
+    <td>Computes the tempo and beat frames</td>
+  </tr>
+  <tr>
+    <td>Display</td>
+    <td><code>import librosa.display</code> <br> <code>librosa.display.waveplot(y, sr=sr)</code></td>
+    <td>Displays a waveform plot</td>
+  </tr>
+  <tr>
+    <td>Audio Effects</td>
+    <td>
+      <ul>
+        <li><b>HPSS</b>: <code>y_harmonic, y_percussive = librosa.effects.hpss(y)</code></li>
+        <li><b>Pitch Shift</b>: <code>y_shifted = librosa.effects.pitch_shift(y, sr, n_steps=4)</code></li>
+      </ul>
+    </td>
+    <td>Applies different effects to audio data</td>
+  </tr>
+  <tr>
+    <td>Saving Audio</td>
+    <td><code>librosa.output.write_wav('filename_out.wav', y, sr)</code></td>
+    <td>Saves the audio data into a .wav file</td>
+  </tr>
+</table>
+
+  <!-- other table rows go here -->
+</table>
 </div>
 </div>
 
-<div class="section">
-<div class="pageitem">
-<div class="col">
-<h2>Aenean at Ipsum</h2>
-<p>Phasellus ac leo eget felis egestas vestibulum nec at velit. Vivamus venenatis, <a href="#">nibh ut tempus viverra</a>, tellus augue pulvinar sapien, at iaculis justo nisi non metus. Quisque quis malesuada arcu, sed ultricies nibh. Duis vehicula metus quis arcu rutrum faucibus eget ut ex. Curabitur lacus justo, iaculis congue suscipit quis, posuere at turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in quam non urna volutpat consequat. Proin mollis ut mauris et venenatis. Vivamus dui nibh, blandit vitae pellentesque sed, finibus sit amet nulla.</p>
-</div>
-<div class="col">
-<h2>Etiam Eleifend Imperdiet Elit</h2>
-<p>Nunc rhoncus convallis ex, eget viverra ex pulvinar non. Suspendisse enim ligula, varius sed rutrum id, bibendum vitae lectus. Mauris mollis pellentesque diam et congue. Praesent dignissim semper facilisis. Duis gravida, elit nec iaculis efficitur, sem orci commodo lectus, id cursus sem diam in eros. Maecenas porta mi sed diam condimentum gravida. Nam a ligula consectetur, imperdiet lacus nec, rutrum dui. Sed aliquam at magna non mollis. Duis fermentum purus eget nisi dictum, vitae bibendum nulla cursus.</p>
-</div>
-</div>
-</div>
-
-<div class="section">
-<div class="pageitem">
-<h2>Nec Pretium Condimentum</h2>
-<p>Morbi bibendum faucibus placerat. Morbi vulputate, erat nunc tincidunt leo, scelerisque ullamcorper dui dolor porttitor neque. Donec ut faucibus erat, vel efficitur enim. Fusce sit amet ligula eu libero lacinia condimentum sed in turpis.</p><p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus pulvinar metus vel neque sagittis, at pharetra tellus tincidunt. Sed semper euismod ipsum, feugiat consequat nisi eleifend et. Duis volutpat gravida efficitur. Nulla iaculis blandit semper. Maecenas eget aliquet libero. Donec sit amet sagittis erat. Sed elementum felis id interdum cursus. Phasellus ac urna feugiat, placerat massa et, vestibulum odio. Aenean eu nisl lobortis, tincidunt ligula rhoncus, convallis mi.</p>
-</div>
-</div>
-
-<div class="section">
-<div class="pageitem">
-<div class="col">
-<h2>Phasellus Ac Leo Eget</h2>
-<p> Vivamus venenatis, nibh ut tempus viverra, tellus augue pulvinar sapien, at iaculis justo nisi non metus. Quisque quis malesuada arcu, sed ultricies nibh. Duis vehicula metus quis arcu rutrum faucibus eget ut ex. Curabitur lacus justo, iaculis congue suscipit quis, posuere at turpis. </p><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in quam non urna volutpat consequat. Proin mollis ut mauris et venenatis. Vivamus dui nibh, blandit vitae pellentesque sed, finibus sit amet nulla.</p>
-</div>
-<div class="col">
-<h2>Etiam Imperdiet Elit</h2>
-<p>Nunc rhoncus convallis ex, eget viverra ex pulvinar non. Suspendisse enim ligula, varius sed rutrum id, bibendum vitae lectus. Mauris mollis pellentesque diam et congue. Praesent dignissim semper facilisis. Duis gravida, elit nec iaculis efficitur, sem orci commodo lectus, id cursus sem diam in eros. </p><p>Maecenas porta mi sed diam condimentum gravida. Nam a ligula consectetur, imperdiet lacus nec, rutrum dui. Sed aliquam at magna non mollis. Duis fermentum purus eget nisi dictum, vitae bibendum nulla cursus.</p>
-</div>
-<div class="col">
-<h2>Morbi Bibendum</h2>
-<p>Donec ut faucibus erat, vel efficitur enim. Fusce sit amet ligula eu libero lacinia condimentum sed in turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus pulvinar metus vel neque sagittis, at pharetra tellus tincidunt. Sed semper euismod ipsum, feugiat consequat nisi eleifend et. Duis volutpat gravida efficitur. Nulla iaculis blandit semper. Maecenas eget aliquet libero. Donec sit amet sagittis erat. Sed elementum felis id interdum cursus. Phasellus ac urna feugiat, placerat massa et, vestibulum odio. Aenean eu nisl lobortis, tincidunt ligula rhoncus, convallis mi.</p>
-</div>
-</div>
-</div>
-
-<!-- footer items go here
-<div class="section">
-<div id="footer">
-
-</div>
-</div>
--->
+<!-- rest of your html code goes here -->
 
 <div class="section">
 <div id="credits">
@@ -104,11 +135,3 @@
 
 <!-- This part has to be kept intact under the CC-NC Licence -->
     <div class="col"><p><a href="http://mlpdesign.net">HTML & CSS</a> by MLPdesign</p></div>
-<!-- CC-NC Licence credit ends here -->
-
-</div>
-</div>
-
-</div>
-</body>
-</html>
