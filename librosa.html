@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Iosif Tsangko | Librosa Commands Cheat Sheet </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="open source html and css template">
+<meta name="author" content="mlp design">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="slidy.css">
+</head>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1, h2, h3 {
+            color: #3399FF;
+        }
+        p, li {
+            color: #333333;
+        }
+        code {
+            color: #CC3333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Librosa Python Cheat Sheet</h1>
+    <p>This cheat sheet provides a comprehensive collection of useful commands in Librosa, a powerful Python library for audio and music processing. From importing the library to saving your final audio output, this guide covers all the essentials.</p>
+
+    <h2>1. Importing Librosa</h2>
+    <p>Librosa is a Python library for analyzing and extracting features from music and audio. Start by importing the library:</p>
+    <code>import librosa</code>
+
+    <h2>2. Loading Audio Files</h2>
+    <p>Before we can analyze audio, we need to load it into Python. We do this using the <code>load()</code> function, which reads and decodes the audio file. It returns a time series array (<code>y</code>) and its sampling rate (<code>sr</code>).</p>
+    <code>y, sr = librosa.load('filename.wav')</code>
+    <h2>3. Playing Audio</h2>
+    <p>The <code>soundfile</code> library can be used in conjunction with Librosa to write audio data into a new file, effectively playing it.</p>
+    <code>import soundfile as sf</code><br>
+    <code>sf.write('new_filename.wav', y, sr)</code>
+
+    <h2>4. Audio Features</h2>
+    <h3>4.1 Spectrogram</h3>
+    <p>The short-time Fourier transform can be computed using the <code>stft()</code> function, which is useful for obtaining a spectrogram.</p>
+    <code>D = librosa.stft(y)</code>
+
+    <h3>4.2 Mel Spectrogram</h3>
+    <p>The <code>melspectrogram()</code> function computes a Mel-scaled power spectrogram.</p>
+    <code>S = librosa.feature.melspectrogram(y, sr=sr)</code>
+
+    <h3>4.3 Chroma Feature</h3>
+    <p>To compute a chromagram from a waveform or spectrogram, use the <code>chroma_stft()</code> function.</p>
+    <code>C = librosa.feature.chroma_stft(y=y, sr=sr)</code>
+
+    <h3>4.4 Spectral Contrast</h3>
+    <p>The <code>spectral_contrast()</code> function computes the spectral contrast of the audio.</p>
+    <code>S_contrast = librosa.feature.spectral_contrast(y=y, sr=sr)</code>
+
+    <h2>5. Beat and Tempo</h2>
+    <p>The <code>beat_track()</code> function computes the tempo and beat frames of the audio.</p>
+    <code>tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)</code>
+
+    <h2>6. Display</h2>
+    <p>To display a waveform plot of the audio, use the <code>waveplot()</code> function from <code>librosa.display</code>.</p>
+    <code>import librosa.display</code><br>
+    <code>librosa.display.waveplot(y, sr=sr)</code>
+
+    <h2>7. Audio Effects</h2>
+    <h3>7.1 Harmonic-Percussive Source Separation (HPSS)</h3>
+    <p>The <code>hpss()</code> function separates an audio time-series into its harmonic and percussive components.</p>
+    <code>y_harmonic, y_percussive = librosa.effects.hpss(y)</code>
+
+    <h3>7.2 Pitch Shift</h3>
+    <p>To shift the pitch of an audio time-series, use the <code>pitch_shift()</code> function.</p>
+    <code>y_shifted = librosa.effects.pitch_shift(y, sr, n_steps=4)</code>
+
+    <h2>8. Saving Audio</h2>
+    <p>The <code>write_wav()</code> function can be used to save the audio time-series data into a .wav file.</p>
+    <code>librosa.output.write_wav('filename_out.wav', y, sr)</code>
+
+    <!-- Continue with rest of the content here... -->
+
+    <p>Always consult the <a href="https://librosa.org/doc/main/index.html">Librosa documentation</a> for a more comprehensive guide.</p>
+</body>
+</html>
