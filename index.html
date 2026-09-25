@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Iosif Tsangko | AI Researcher</title>
-    <meta name="description" content="Iosif Tsangko is an AI researcher and PhD candidate at the Technical University of Munich working on affective computing, speech and audio processing, and foundation models.">
+    <meta name="description" content="Iosif Tsangko is an AI researcher and PhD candidate at the Technical University of Munich working on affective computing, speech and audio processing, foundation models and predictive maintenance.">
     <meta name="author" content="Iosif Tsangko">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css">
@@ -16,8 +16,9 @@
             <ul>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#patents">Patents</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#collaborations">Collaborations</a></li>
-                <li><a href="#notes">Notes</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -25,12 +26,17 @@
 
     <main id="top">
         <section class="hero container">
-            <p class="eyebrow">AI Researcher &middot; PhD Candidate</p>
-            <h1>Iosif Tsangko</h1>
+            <div class="hero-top">
+                <div class="avatar" aria-hidden="true">IT</div>
+                <div>
+                    <p class="eyebrow">AI Researcher &middot; PhD Candidate</p>
+                    <h1>Iosif Tsangko</h1>
+                </div>
+            </div>
             <p class="lead">
                 I build and study machine learning systems that listen, see and understand people:
-                speech enhancement, emotion recognition, and the behaviour of foundation models
-                in affective computing.
+                speech enhancement for hearing aids, emotion recognition, the behaviour of foundation
+                models, and signal-based predictive maintenance.
             </p>
             <p class="affiliation">
                 <a href="https://kiinformatik.mri.tum.de/en/chair-health-informatics/team/iosif_tsangko">Chair of Health Informatics</a>,
@@ -42,15 +48,27 @@
                 <li><a class="button" href="https://www.researchgate.net/profile/Iosif-Tsangko-2">ResearchGate</a></li>
                 <li><a class="button" href="https://github.com/iosifts">GitHub</a></li>
             </ul>
+            <div class="stats">
+                <div class="stat"><strong>18</strong><span>publications</span></div>
+                <div class="stat"><strong>147</strong><span>citations</span></div>
+                <div class="stat"><strong>7</strong><span>h-index</span></div>
+                <div class="stat"><strong>1</strong><span>patent application</span></div>
+                <p class="source">Citation metrics: Google Scholar, September 2026</p>
+            </div>
         </section>
 
         <section id="about" class="container">
             <h2>About</h2>
             <p>
-                I am a PhD candidate supervised by Prof. Björn W. Schuller. My doctoral work on
-                <em>audio state and trait modelling</em> began in November 2022 at the Chair of Embedded
-                Intelligence for Health Care and Wellbeing, University of Augsburg, and continues at the
-                Chair of Health Informatics at TUM. I studied Mathematics at the University of Crete, Greece.
+                I am a PhD candidate at the Chair of Health Informatics, Technical University of Munich,
+                supervised by Prof. Björn W. Schuller. My doctoral work on <em>audio state and trait modelling</em>
+                began in November 2022 at the Chair of Embedded Intelligence for Health Care and Wellbeing,
+                University of Augsburg. Before that I trained as a mathematician at the University of Crete.
+            </p>
+            <p>
+                My work spans speech enhancement for hearing aids, affective computing with foundation
+                models, AI for cultural heritage and accessibility, and early fault detection from
+                sensor signals.
             </p>
         </section>
 
@@ -59,84 +77,217 @@
             <div class="grid">
                 <article class="card">
                     <h3>Affective computing</h3>
-                    <p>Emotion recognition from speech, faces and text, and how foundation models change the field.</p>
+                    <p>Emotion recognition from speech, faces and text, and how foundation models are changing the field.</p>
                 </article>
                 <article class="card">
-                    <h3>Speech &amp; audio</h3>
-                    <p>Noise-adaptive speech enhancement for hearing aids and paralinguistic analysis of speech.</p>
+                    <h3>Speech enhancement &amp; hearing aids</h3>
+                    <p>Noise- and speaker-adaptive denoising, and bringing multimodal foundation models to hearing aids.</p>
                 </article>
                 <article class="card">
                     <h3>Foundation models</h3>
-                    <p>Probing vision- and audio-language models for shortcuts, biases and interpretable cues.</p>
+                    <p>Probing vision- and audio-language models for shortcuts, proxy biases and interpretable acoustic cues.</p>
                 </article>
                 <article class="card">
-                    <h3>AI for accessibility &amp; culture</h3>
-                    <p>Art descriptions for blind and low-vision audiences and LLM analysis of cultural heritage projects.</p>
+                    <h3>Computer audition</h3>
+                    <p>Acoustic scene classification, zero-shot action recognition from audio, and paralinguistics.</p>
+                </article>
+                <article class="card">
+                    <h3>AI for culture &amp; accessibility</h3>
+                    <p>LLMs in cultural heritage and art descriptions for blind and low-vision audiences.</p>
+                </article>
+                <article class="card">
+                    <h3>Predictive maintenance</h3>
+                    <p>Early warning of component failure from remotely sensed signals in vehicle fleets.</p>
                 </article>
             </div>
         </section>
 
         <section id="publications" class="container">
             <h2>Publications</h2>
-            <p class="muted">The full, up-to-date list is on <a href="https://scholar.google.com/citations?user=AF3OIFEAAAAJ">Google Scholar</a>.</p>
+            <div class="filters" role="group" aria-label="Filter publications">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="first">First author</button>
+                <button type="button" data-filter="journal">Journal</button>
+                <button type="button" data-filter="conference">Conference</button>
+                <button type="button" data-filter="chapter">Book chapter</button>
+                <button type="button" data-filter="preprint">Preprint</button>
+            </div>
+            <p class="muted">Also on <a href="https://scholar.google.com/citations?user=AF3OIFEAAAAJ">Google Scholar</a>.</p>
 
-            <h3 class="year">2026</h3>
-            <ol class="pubs">
-                <li>
-                    <span class="venue">Preprint</span>
-                    <p class="title">Acoustic Cue Alignment in Audio Language Models for Speech Emotion Recognition</p>
-                    <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, B. W. Schuller</p>
-                    <p class="meta">arXiv:2606.07309 &middot; <a href="https://arxiv.org/abs/2606.07309">arXiv</a></p>
-                </li>
-                <li>
-                    <span class="venue">Preprint</span>
-                    <p class="title">A Pilot Study on Curator-Guided Multilingual Art Description for Blind and Low-Vision Audiences with Small Vision-Language Models</p>
-                    <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, G. Margetis, I. Crihana, B. W. Schuller</p>
-                    <p class="meta">arXiv:2605.31080 &middot; <a href="https://arxiv.org/abs/2605.31080">arXiv</a></p>
-                </li>
-                <li>
-                    <span class="venue">Journal</span>
-                    <p class="title">Affective Computing Has Changed: The Foundation Model Disruption</p>
-                    <p class="authors">B. W. Schuller, A. Mallol-Ragolta, A. Peña Almansa, <strong>I. Tsangko</strong>, M. M. Amin, A. Semertzidou, L. Christ, S. Amiriparian</p>
-                    <p class="meta"><em>npj Artificial Intelligence</em>, vol. 2, art. 16 &middot; <a href="https://www.nature.com/articles/s44387-025-00061-3">Paper</a> &middot; <a href="https://arxiv.org/abs/2409.08907">arXiv</a></p>
-                </li>
-            </ol>
+            <div class="pub-year">
+                <h3 class="year">2026</h3>
+                <ol class="pubs">
+                    <li data-type="preprint" data-first>
+                        <span class="venue">Preprint</span>
+                        <p class="title">Acoustic Cue Alignment in Audio Language Models for Speech Emotion Recognition</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, B. W. Schuller</p>
+                        <p class="meta">arXiv:2606.07309 &middot; <a href="https://arxiv.org/abs/2606.07309">arXiv</a></p>
+                    </li>
+                    <li data-type="preprint" data-first>
+                        <span class="venue">Preprint</span>
+                        <p class="title">A Pilot Study on Curator-Guided Multilingual Art Description for Blind and Low-Vision Audiences with Small Vision-Language Models</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, G. Margetis, I. Crihana, B. W. Schuller</p>
+                        <p class="meta">arXiv:2605.31080 &middot; <a href="https://arxiv.org/abs/2605.31080">arXiv</a></p>
+                    </li>
+                    <li data-type="conference" data-first>
+                        <span class="venue">Conference</span>
+                        <p class="title">Early Warning of Starter-Battery Failure from Remotely Sensed Engine-Start Signals in Heavy-Duty Fleets</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, S. Bucher, A. Huber, M. Wollner, O. Pracht, A. Gebhard, M. Milling, et al.</p>
+                        <p class="meta"><em>International Conference on Control, Automation and Diagnosis (ICCAD 2026)</em>, pp. 1&ndash;6</p>
+                    </li>
+                    <li data-type="conference">
+                        <span class="venue">Conference</span>
+                        <p class="title">Bringing Multimodal Foundation Models to Hearing Aids</p>
+                        <p class="authors">A. Triantafyllopoulos, <strong>I. Tsangko</strong>, B. W. Schuller</p>
+                        <p class="meta"><em>IEEE ICASSP 2026</em> &middot; <a href="https://ieeexplore.ieee.org/document/11464213/">Paper</a></p>
+                    </li>
+                    <li data-type="journal">
+                        <span class="venue">Journal</span>
+                        <p class="title">Affective Computing Has Changed: The Foundation Model Disruption</p>
+                        <p class="authors">B. W. Schuller, A. Mallol-Ragolta, A. Peña Almansa, <strong>I. Tsangko</strong>, M. M. Amin, A. Semertzidou, L. Christ, S. Amiriparian</p>
+                        <p class="meta"><em>npj Artificial Intelligence</em>, vol. 2, art. 16 &middot; <a href="https://www.nature.com/articles/s44387-025-00061-3">Paper</a> &middot; <a href="https://arxiv.org/abs/2409.08907">arXiv</a></p>
+                    </li>
+                    <li data-type="chapter" data-first>
+                        <span class="venue">Chapter</span>
+                        <p class="title">LLMs in Cultural Heritage</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, B. W. Schuller</p>
+                        <p class="meta">In <em>Artificial Intelligence and Large Language Models: A Scientific Perspective</em> (A. Moallem, H. Degen, S. Ntoa, eds.), CRC Press, pp. 58&ndash;90 &middot; <a href="https://doi.org/10.1201/9781003492252-3">Chapter</a></p>
+                    </li>
+                </ol>
+            </div>
 
-            <h3 class="year">2025</h3>
-            <ol class="pubs">
-                <li>
-                    <span class="venue">Journal</span>
-                    <p class="title">Reading Smiles: Proxy Bias in Foundation Models for Facial Emotion Recognition</p>
-                    <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, A. Abdelmoula, A. Mallol-Ragolta, B. W. Schuller</p>
-                    <p class="meta"><em>IEEE Access</em>, vol. 13 &middot; <a href="https://ieeexplore.ieee.org/document/11267439/">Paper</a> &middot; <a href="https://arxiv.org/abs/2506.19079">arXiv</a></p>
-                </li>
-                <li>
-                    <span class="venue">Conference</span>
-                    <p class="title">DFingerNet: Noise-Adaptive Speech Enhancement for Hearing Aids</p>
-                    <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, M. Müller, H. Schröter, B. W. Schuller</p>
-                    <p class="meta"><em>IEEE ICASSP 2025</em> &middot; <a href="https://arxiv.org/abs/2501.10525">arXiv</a></p>
-                </li>
-                <li>
-                    <span class="venue">Conference</span>
-                    <p class="title">Large Language Models for the Analysis of Project Proposals</p>
-                    <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, E. Kyriakidis, G. Margetis, B. W. Schuller</p>
-                    <p class="meta"><em>Artificial Intelligence in HCI (HCII 2025)</em>, Springer &middot; <a href="https://link.springer.com/chapter/10.1007/978-3-031-93415-5_24">Paper</a></p>
-                </li>
-                <li>
-                    <span class="venue">Preprint</span>
-                    <p class="title">MELT: Towards Automated Multimodal Emotion Data Annotation by Leveraging LLM Embedded Knowledge</p>
-                    <p class="authors">X. Jing, J. Wang, <strong>I. Tsangko</strong>, A. Triantafyllopoulos, B. W. Schuller</p>
-                    <p class="meta">arXiv:2505.24493 &middot; <a href="https://arxiv.org/abs/2505.24493">arXiv</a> &middot; <a href="https://github.com/KeiKinn/meltdataset">Dataset</a></p>
-                </li>
-            </ol>
+            <div class="pub-year">
+                <h3 class="year">2025</h3>
+                <ol class="pubs">
+                    <li data-type="journal">
+                        <span class="venue">Journal</span>
+                        <p class="title">Vishing: Detecting Social Engineering in Spoken Communication &mdash; A First Survey &amp; Urgent Roadmap to Address an Emerging Societal Challenge</p>
+                        <p class="authors">A. Triantafyllopoulos, A. A. Spiesberger, <strong>I. Tsangko</strong>, X. Jing, V. Distler, F. Dietz, F. Alt, B. W. Schuller</p>
+                        <p class="meta"><em>Computer Speech &amp; Language</em>, vol. 94, art. 101802 &middot; <a href="https://doi.org/10.1016/j.csl.2025.101802">Paper</a></p>
+                    </li>
+                    <li data-type="journal">
+                        <span class="venue">Journal</span>
+                        <p class="title">Computer Audition: From Task-Specific Machine Learning to Foundation Models</p>
+                        <p class="authors">A. Triantafyllopoulos, <strong>I. Tsangko</strong>, A. Gebhard, A. Mesaros, T. Virtanen, B. W. Schuller</p>
+                        <p class="meta"><em>Proceedings of the IEEE</em> &middot; <a href="https://arxiv.org/abs/2407.15672">arXiv</a></p>
+                    </li>
+                    <li data-type="journal" data-first>
+                        <span class="venue">Journal</span>
+                        <p class="title">Reading Smiles: Proxy Bias in Foundation Models for Facial Emotion Recognition</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, A. Abdelmoula, A. Mallol-Ragolta, B. W. Schuller</p>
+                        <p class="meta"><em>IEEE Access</em>, vol. 13 &middot; <a href="https://ieeexplore.ieee.org/document/11267439/">Paper</a> &middot; <a href="https://arxiv.org/abs/2506.19079">arXiv</a></p>
+                    </li>
+                    <li data-type="conference" data-first>
+                        <span class="venue">Conference</span>
+                        <p class="title">DFingerNet: Noise-Adaptive Speech Enhancement for Hearing Aids</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, M. Müller, H. Schröter, B. W. Schuller</p>
+                        <p class="meta"><em>IEEE ICASSP 2025</em> &middot; <a href="https://arxiv.org/abs/2501.10525">arXiv</a></p>
+                    </li>
+                    <li data-type="conference">
+                        <span class="venue">Conference</span>
+                        <p class="title">Speaker vs Noise Conditioning for Adaptive Speech Enhancement</p>
+                        <p class="authors">A. Triantafyllopoulos, <strong>I. Tsangko</strong>, M. Müller, H. Schröter, B. W. Schuller</p>
+                        <p class="meta"><em>Speech Communication &ndash; 16th ITG Conference (ITG-SC 2025)</em>, Berlin</p>
+                    </li>
+                    <li data-type="conference" data-first>
+                        <span class="venue">Conference</span>
+                        <p class="title">Large Language Models for the Analysis of Project Proposals</p>
+                        <p class="authors"><strong>I. Tsangko</strong>, A. Triantafyllopoulos, E. Kyriakidis, G. Margetis, B. W. Schuller</p>
+                        <p class="meta"><em>Artificial Intelligence in HCI (HCII 2025)</em>, Springer, pp. 408&ndash;420 &middot; <a href="https://link.springer.com/chapter/10.1007/978-3-031-93415-5_24">Paper</a></p>
+                    </li>
+                    <li data-type="conference">
+                        <span class="venue">Workshop</span>
+                        <p class="title">Towards Audio-based Zero-Shot Action Recognition in Kitchen Environments</p>
+                        <p class="authors">A. Gebhard, A. Triantafyllopoulos, <strong>I. Tsangko</strong>, B. W. Schuller</p>
+                        <p class="meta"><em>DCASE 2025 Workshop</em>, Barcelona, pp. 15&ndash;19 &middot; <a href="https://dcase.community/documents/workshop2025/proceedings/DCASE2025Workshop_Gebhard_5.pdf">PDF</a></p>
+                    </li>
+                    <li data-type="preprint">
+                        <span class="venue">Preprint</span>
+                        <p class="title">MELT: Towards Automated Multimodal Emotion Data Annotation by Leveraging LLM Embedded Knowledge</p>
+                        <p class="authors">X. Jing, J. Wang, <strong>I. Tsangko</strong>, A. Triantafyllopoulos, B. W. Schuller</p>
+                        <p class="meta">arXiv:2505.24493 &middot; <a href="https://arxiv.org/abs/2505.24493">arXiv</a> &middot; <a href="https://github.com/KeiKinn/meltdataset">Dataset</a></p>
+                    </li>
+                </ol>
+            </div>
 
-            <h3 class="year">2023</h3>
-            <ol class="pubs">
+            <div class="pub-year">
+                <h3 class="year">2024</h3>
+                <ol class="pubs">
+                    <li data-type="journal">
+                        <span class="venue">Journal</span>
+                        <p class="title">Beyond Deep Learning: Charting the Next Frontiers of Affective Computing</p>
+                        <p class="authors">A. Triantafyllopoulos, L. Christ, A. Gebhard, X. Jing, A. Kathan, M. Milling, <strong>I. Tsangko</strong>, S. Amiriparian, B. W. Schuller</p>
+                        <p class="meta"><em>Intelligent Computing</em>, vol. 3, art. 0089 &middot; <a href="https://doi.org/10.34133/icomputing.0089">Paper</a></p>
+                    </li>
+                    <li data-type="conference">
+                        <span class="venue">Conference</span>
+                        <p class="title">Bringing the Discussion of Minima Sharpness to the Audio Domain: A Filter-Normalised Evaluation for Acoustic Scene Classification</p>
+                        <p class="authors">M. Milling, A. Triantafyllopoulos, <strong>I. Tsangko</strong>, S. D. N. Rampp, B. W. Schuller</p>
+                        <p class="meta"><em>IEEE ICASSP 2024</em> &middot; <a href="https://ieeexplore.ieee.org/document/10446177/">Paper</a> &middot; <a href="https://arxiv.org/abs/2309.16369">arXiv</a> &middot; <a href="https://github.com/EIHW/ASC_Sharpness">Code</a></p>
+                    </li>
+                    <li data-type="preprint">
+                        <span class="venue">Preprint</span>
+                        <p class="title">Large Language Models for Mental Health</p>
+                        <p class="authors">A. Triantafyllopoulos, Y. Terhorst, <strong>I. Tsangko</strong>, F. B. Pokorny, K. D. Bartl-Pokorny, L. Seizer, A. Klein, J. Chim, D. Atzil-Slonim, M. Liakata, M. Bühner, J. Löchner, B. W. Schuller</p>
+                        <p class="meta">arXiv:2411.11880 &middot; <a href="https://arxiv.org/abs/2411.11880">arXiv</a></p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="pub-year">
+                <h3 class="year">2023</h3>
+                <ol class="pubs">
+                    <li data-type="conference">
+                        <span class="venue">Conference</span>
+                        <p class="title">Abusive Speech Detection in Indic Languages Using Acoustic Features</p>
+                        <p class="authors">A. A. Spiesberger, A. Triantafyllopoulos, <strong>I. Tsangko</strong>, B. W. Schuller</p>
+                        <p class="meta"><em>Interspeech 2023</em>, pp. 2683&ndash;2687 &middot; <a href="https://www.isca-archive.org/interspeech_2023/spiesberger23_interspeech.html">Paper</a> &middot; <a href="https://arxiv.org/abs/2407.20808">arXiv</a></p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="patents" class="container">
+            <h2>Patents</h2>
+            <div class="feature">
+                <span class="venue inline">Patent application</span>
+                <p class="title">International patent application WO 2026/068002 A1</p>
+                <p>Inventor: <strong>Iosif Tsangko</strong></p>
+                <p class="meta">PCT application published by WIPO, 2026 &middot; <a href="https://patents.google.com/patent/WO2026068002A1/en">Google Patents</a></p>
+            </div>
+        </section>
+
+        <section id="education" class="container">
+            <h2>Education</h2>
+            <ol class="timeline">
                 <li>
-                    <span class="venue">Conference</span>
-                    <p class="title">Abusive Speech Detection in Indic Languages Using Acoustic Features</p>
-                    <p class="authors">A. A. Spiesberger, A. Triantafyllopoulos, <strong>I. Tsangko</strong>, B. W. Schuller</p>
-                    <p class="meta"><em>Interspeech 2023</em>, pp. 2683&ndash;2687 &middot; <a href="https://www.isca-archive.org/interspeech_2023/spiesberger23_interspeech.html">Paper</a> &middot; <a href="https://arxiv.org/abs/2407.20808">arXiv</a></p>
+                    <p class="when">2022 &ndash; present</p>
+                    <div>
+                        <p class="what">Ph.D. candidate</p>
+                        <p class="where">Technical University of Munich (Chair of Health Informatics) &middot; University of Augsburg (EIHW)</p>
+                        <p class="detail">Thesis topic: audio state and trait modelling. Supervisor: Prof. Björn W. Schuller.</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">M.Sc.</p>
+                    <div>
+                        <p class="what">Master&rsquo;s degree</p>
+                        <p class="where">Hellenic Army Academy (Στρατιωτική Σχολή Ευελπίδων), Greece</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">M.Sc.</p>
+                    <div>
+                        <p class="what">M.Sc. in Mathematics</p>
+                        <p class="where"><a href="http://www.tem.uoc.gr/en/msc.html">Department of Mathematics &amp; Applied Mathematics</a>, University of Crete, Greece</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">B.Sc.</p>
+                    <div>
+                        <p class="what">B.Sc. in Mathematics</p>
+                        <p class="where">University of Crete, Greece</p>
+                    </div>
                 </li>
             </ol>
         </section>
@@ -146,23 +297,43 @@
             <div class="grid">
                 <article class="card">
                     <h3>Technical University of Munich</h3>
-                    <p>Chair of Health Informatics, with Prof. Björn W. Schuller and Dr. Andreas Triantafyllopoulos.</p>
-                </article>
-                <article class="card">
-                    <h3>Munich Center for Machine Learning</h3>
-                    <p>Research on affective computing and foundation models within the MCML network.</p>
+                    <p>My home group, the Chair of Health Informatics, with Björn W. Schuller, Andreas Triantafyllopoulos, Adria Mallol-Ragolta, Xin Jing, Alexander Gebhard and Manuel Milling.</p>
                 </article>
                 <article class="card">
                     <h3>University of Augsburg</h3>
                     <p>Chair of Embedded Intelligence for Health Care and Wellbeing (EIHW), where my PhD began.</p>
                 </article>
                 <article class="card">
-                    <h3>Hearing technology</h3>
-                    <p>Noise-adaptive speech enhancement for hearing aids (DFingerNet) with M. Müller and H. Schröter.</p>
+                    <h3>Munich Center for Machine Learning</h3>
+                    <p>Research on affective computing and foundation models within the MCML network.</p>
                 </article>
                 <article class="card">
-                    <h3>Cultural heritage &amp; accessibility</h3>
-                    <p>LLM analysis of heritage project proposals and art description for blind and low-vision visitors, with G. Margetis and colleagues.</p>
+                    <h3>SHIFT &mdash; EU Horizon project</h3>
+                    <p>An EU project on AI for accessible cultural heritage (grant 101060660), which funded work such as <em>Reading Smiles</em>.</p>
+                </article>
+                <article class="card">
+                    <h3>FORTH, Greece</h3>
+                    <p>With George Margetis on LLMs for cultural-heritage project proposals and art descriptions for blind and low-vision audiences.</p>
+                </article>
+                <article class="card">
+                    <h3>Tampere University</h3>
+                    <p>With Annamaria Mesaros and Tuomas Virtanen on the <em>Proceedings of the IEEE</em> survey on computer audition.</p>
+                </article>
+                <article class="card">
+                    <h3>Queen Mary University of London &amp; Bar-Ilan University</h3>
+                    <p>With Maria Liakata, Dana Atzil-Slonim and colleagues on large language models for mental health.</p>
+                </article>
+                <article class="card">
+                    <h3>Usable security</h3>
+                    <p>With Verena Distler, Felix Dietz and Florian Alt on the first survey of vishing (voice phishing) detection.</p>
+                </article>
+                <article class="card">
+                    <h3>Hearing-aid speech enhancement</h3>
+                    <p>With Michael Müller and Hendrik Schröter on noise- and speaker-adaptive denoising (DFingerNet).</p>
+                </article>
+                <article class="card">
+                    <h3>Fleet predictive maintenance</h3>
+                    <p>With S. Bucher, A. Huber, M. Wollner and O. Pracht on early warning of starter-battery failure in heavy-duty fleets.</p>
                 </article>
             </div>
         </section>
@@ -179,7 +350,7 @@
             <p>
                 The best way to reach me is via <a href="https://www.linkedin.com/in/iosif-tsangko/">LinkedIn</a>
                 or my <a href="https://kiinformatik.mri.tum.de/en/chair-health-informatics/team/iosif_tsangko">TUM staff page</a>.
-                I'm happy to talk about research collaborations.
+                I&rsquo;m always happy to talk about research collaborations.
             </p>
         </section>
     </main>
@@ -187,5 +358,35 @@
     <footer class="site-footer">
         <div class="container">&copy; 2026 Iosif Tsangko</div>
     </footer>
+
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll('.filters button');
+            var items = document.querySelectorAll('.pubs li');
+            var years = document.querySelectorAll('.pub-year');
+
+            buttons.forEach(function (button) {
+                var f = button.dataset.filter;
+                var n = 0;
+                items.forEach(function (li) { if (matches(li, f)) n++; });
+                var count = document.createElement('span');
+                count.className = 'count';
+                count.textContent = n;
+                button.appendChild(count);
+
+                button.addEventListener('click', function () {
+                    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); });
+                    items.forEach(function (li) { li.hidden = !matches(li, f); });
+                    years.forEach(function (y) { y.hidden = !y.querySelector('li:not([hidden])'); });
+                });
+            });
+
+            function matches(li, f) {
+                if (f === 'all') return true;
+                if (f === 'first') return li.hasAttribute('data-first');
+                return li.dataset.type === f;
+            }
+        })();
+    </script>
 </body>
 </html>

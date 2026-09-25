@@ -194,6 +194,7 @@ h2 {
 }
 
 .plain { padding-left: 20px; }
+.venue.inline { position: static; display: inline-block; width: auto; padding: 2px 10px; }
 
 /* Publication filters */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
@@ -266,5 +267,6 @@ code {
     .hero { padding-top: 40px; }
     .avatar { width: 64px; height: 64px; font-size: 24px; }
     .timeline li { grid-template-columns: 1fr; }
-    .stats .source { margin-left: 0; align-self: auto; width: 100%; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .stats .source { grid-column: 1 / -1; margin-left: 0; align-self: auto; }
 }
