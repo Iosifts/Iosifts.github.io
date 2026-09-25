@@ -106,11 +106,11 @@
             <h2>Publications</h2>
             <div class="filters" role="group" aria-label="Filter publications">
                 <button type="button" data-filter="all" aria-pressed="true">All</button>
-                <button type="button" data-filter="first">First author</button>
-                <button type="button" data-filter="journal">Journal</button>
-                <button type="button" data-filter="conference">Conference</button>
-                <button type="button" data-filter="chapter">Book chapter</button>
-                <button type="button" data-filter="preprint">Preprint</button>
+                <button type="button" data-filter="first" aria-pressed="false">First author</button>
+                <button type="button" data-filter="journal" aria-pressed="false">Journal</button>
+                <button type="button" data-filter="conference" aria-pressed="false">Conference</button>
+                <button type="button" data-filter="chapter" aria-pressed="false">Book chapter</button>
+                <button type="button" data-filter="preprint" aria-pressed="false">Preprint</button>
             </div>
             <p class="muted">Also on <a href="https://scholar.google.com/citations?user=AF3OIFEAAAAJ">Google Scholar</a>.</p>
 
@@ -252,7 +252,7 @@
             <div class="feature">
                 <span class="venue inline">Patent application</span>
                 <p class="title">International patent application WO 2026/068002 A1</p>
-                <p>Inventor: <strong>Iosif Tsangko</strong></p>
+                <p>Inventors include <strong>Iosif Tsangko</strong></p>
                 <p class="meta">PCT application published by WIPO, 2026 &middot; <a href="https://patents.google.com/patent/WO2026068002A1/en">Google Patents</a></p>
             </div>
         </section>
@@ -269,10 +269,10 @@
                     </div>
                 </li>
                 <li>
-                    <p class="when">M.Sc.</p>
+                    <p class="when">Master&rsquo;s</p>
                     <div>
-                        <p class="what">Master&rsquo;s degree</p>
-                        <p class="where">Hellenic Army Academy (Στρατιωτική Σχολή Ευελπίδων), Greece</p>
+                        <p class="what">Master&rsquo;s studies</p>
+                        <p class="where">Hellenic Army Academy (<span lang="el">Στρατιωτική Σχολή Ευελπίδων</span>), Greece</p>
                     </div>
                 </li>
                 <li>
@@ -297,7 +297,7 @@
             <div class="grid">
                 <article class="card">
                     <h3>Technical University of Munich</h3>
-                    <p>My home group, the Chair of Health Informatics, with Björn W. Schuller, Andreas Triantafyllopoulos, Adria Mallol-Ragolta, Xin Jing, Alexander Gebhard and Manuel Milling.</p>
+                    <p>My home group, the Chair of Health Informatics, with Björn W. Schuller, Andreas Triantafyllopoulos, Adria Mallol-Ragolta, Xin Jing and Alexander Gebhard.</p>
                 </article>
                 <article class="card">
                     <h3>University of Augsburg</h3>
@@ -372,7 +372,7 @@
                 var count = document.createElement('span');
                 count.className = 'count';
                 count.textContent = n;
-                button.appendChild(count);
+                button.append(' ', count);
 
                 button.addEventListener('click', function () {
                     buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); });

@@ -5,7 +5,9 @@ Welcome to the repository of my personal website, focused on AI and Deep Learnin
 ## Features
 
 - **Research**: My research interests in affective computing, speech and audio, and foundation models.
-- **Publications**: Peer-reviewed papers and preprints, with links to papers, arXiv and code.
+- **Publications**: Peer-reviewed papers and preprints, filterable by type, with links to papers, arXiv and code.
+- **Patents**: Patent applications.
+- **Education**: Degrees and doctoral studies.
 - **Collaborations**: The groups and people I work with.
 - **Notes**: Technical notes, such as a Librosa cheat sheet.
 - **Contact**: How to get in touch for collaborations and discussions.
