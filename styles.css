@@ -103,14 +103,17 @@ h2 {
 
 /* Hero */
 .hero { padding-top: 64px; padding-bottom: 16px; }
-.hero-top { display: flex; align-items: center; gap: 20px; }
+.hero-top { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
 .avatar {
     flex: none;
     display: grid;
     place-items: center;
-    width: 84px;
-    height: 84px;
+    width: 112px;
+    height: 112px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--border), 0 4px 14px rgba(0, 0, 0, 0.12);
     background: linear-gradient(135deg, #1f5fbf, #6a4fd1);
     color: #fff;
     font-size: 30px;
@@ -273,7 +276,7 @@ code {
     .pubs li { padding-left: 0; }
     .venue { position: static; display: inline-block; width: auto; padding: 2px 8px; margin-bottom: 6px; }
     .hero { padding-top: 40px; }
-    .avatar { width: 64px; height: 64px; font-size: 24px; }
+    .avatar { width: 80px; height: 80px; }
     .timeline li { grid-template-columns: 1fr; }
     .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .stats .source { grid-column: 1 / -1; margin: 0; align-self: auto; }
